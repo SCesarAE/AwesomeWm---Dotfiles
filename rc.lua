@@ -65,15 +65,15 @@ myawesomemenu = {
    { "Quit", function() awesome.quit() end },
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Open kitty", terminal },
-                                    { "Brave", browser},
-                                    { "Thunderbird", mail},
-                                    { "Files", "nautilus"},
-                                    { "Audio", "helvum"}
-				    
-
-                                  }
+mymainmenu = awful.menu({ 
+		items = { 
+				{ " Awesome", myawesomemenu },
+                         	{ " Open kitty", terminal },
+                            	{ " Brave", browser},
+                            	{ "Mail", mail, " "},
+                            	{ " Files", "nautilus"},
+                           	{ " Audio", "helvum"}
+                                }
                         })
 			
 
