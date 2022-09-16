@@ -45,6 +45,8 @@ browser = "brave-browser-nightly"
 audio = "helvum"
 mail = "thunderbird-nightly"
 
+
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -66,7 +68,11 @@ myawesomemenu = {
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Open kitty", terminal },
                                     { "Brave", browser},
-                                    { "Thunderbird", mail}
+                                    { "Thunderbird", mail},
+                                    { "Files", "nautilus"},
+                                    { "Audio", "helvum"}
+				    
+
                                   }
                         })
 --size menu
@@ -239,13 +245,17 @@ awful.keyboard.append_global_keybindings({
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
                   }
               end,
-              {description = "lua execute prompt", group = "awesome"}),
+              {description = "Lua execute prompt", group = "awesome"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open a terminal", group = "launcher"}),
+              {description = "Open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.spawn(applauncher) end,
-              {description = "open rofi", group = "launcher"}),
+              {description = "Open rofi", group = "launcher"}),
     awful.key({ modkey },            "b",     function () awful.spawn(browser) end,
-              {description = "open brave browser", group = "launcher"}),
+              {description = "Open brave browser", group = "launcher"}),
+    awful.key({ modkey },            "a",     function () awful.spawn(mail) end,
+              {description = "Open Thunderbird", group = "launcher"}),
+    awful.key({ modkey },            "v",     function () awful.spawn("nautilus") end,
+              {description = "Open Files", group = "launcher"}),
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
 })
