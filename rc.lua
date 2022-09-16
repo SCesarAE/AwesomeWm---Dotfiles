@@ -34,7 +34,7 @@ end)
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/sky/theme.lua")
+beautiful.init("sky/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -75,9 +75,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 
                                   }
                         })
---size menu
-beautiful.menu_height=20
-beautiful.menu_width=80
+			
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -577,9 +575,6 @@ end)
 
 -- }}}
 
---Custom config
-beautiful.useless_gap=15 --Separacion de las ventanas
--- }}}
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)

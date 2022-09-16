@@ -1,5 +1,5 @@
 -------------------------------
---    "Sky" awesome theme    --
+--    "City" awesome theme    --
 --  By Andrei "Garoth" Thorp --
 -------------------------------
 -- If you want SVGs and extras, get them from garoth.com/awesome/sky-theme
@@ -16,22 +16,25 @@ local themes_path = require("gears.filesystem").get_themes_dir()
 local theme = {}
 theme.font          = "sans 11"
 
-theme.bg_focus      = "#e2eeea"
-theme.bg_normal     = "#729fcf"
+theme.menu_height   = 20
+theme.menu_width    = 80
+
+theme.bg_focus      = "#41c3c0"
+theme.bg_normal     = "#5841c3"
 theme.bg_urgent     = "#fce94f"
 theme.bg_minimize   = "#0067ce"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#2e3436"
-theme.fg_focus      = "#2e3436"
-theme.fg_urgent     = "#2e3436"
-theme.fg_minimize   = "#2e3436"
+theme.fg_normal     = "#ecf9f9"
+theme.fg_focus      = "#061313"
+theme.fg_urgent     = "#ecf9f9"
+theme.fg_minimize   = "#ecf9f9"
 
-theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(2)
-theme.border_color_normal = "#dae3e0"
-theme.border_color_active = "#729fcf"
-theme.border_color_marked = "#eeeeec"
+theme.useless_gap   = 15 --Separacion de las ventanas
+-- theme.border_width  = dpi(2)
+-- theme.border_color_normal = "#dae3e0"
+-- theme.border_color_active = "#729fcf"
+-- theme.border_color_marked = "#eeeeec"
 
 -- IMAGES
 theme.layout_fairh           = themes_path .. "sky/layouts/fairh.png"
@@ -66,7 +69,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 )
 
 -- MISC
-theme.wallpaper             = "~/Desktop/SCesarAE/myrepos/AwesomeWm-Dotfiles/sky/City.jpg"
+theme.wallpaper             = "sky/City.jpg"
 theme.taglist_squares       = "true"
 theme.titlebar_close_button = "true"
 theme.menu_height = dpi(15)
